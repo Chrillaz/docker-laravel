@@ -2,6 +2,7 @@
 node_modules
 vendor
 src
+mysql
 .env
 
 # Log files
