@@ -60,7 +60,7 @@ services:
       - mysql
     environment:
       PMA_HOST: mysql
-      UPLOAD_LIMIT: 500
+      UPLOAD_LIMIT: 500000
     networks:
       - laravel
 
@@ -93,6 +93,6 @@ services:
     depends_on: 
       - mysql
     working_dir: /var/www/html
-    entrypoint: ['/var/www/html/artisan']
+    entrypoint: ['php', '/var/www/html/artisan']
     networks:
       - laravel
